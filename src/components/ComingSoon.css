@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: 2px dotted rgb(231, 4, 4);
+  }
+  
+  
+  html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }

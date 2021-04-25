@@ -1,38 +1,51 @@
-.App {
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: 2px dotted rgb(231, 4, 4);
+}
+
+
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+/* https://stackoverflow.com/questions/32805670/what-does-before-and-after-do-in-css */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+
+.app-header {
+  background-color: #282c34;
+  padding: 20px 10px;
+  font-family: cursive;
   font-size: calc(10px + 2vmin);
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px #ffc600, 2px 2px 2px #ffc600,
+    18px 10px 8px rgba(42, 113, 206, 0.8);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div > p, div > h2 {
+  padding: 8px 5px;
 }
+

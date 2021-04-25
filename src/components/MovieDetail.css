@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: 2px dotted rgb(231, 4, 4);
+  }
+  
+  
+  html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  a  {
+    text-decoration: none;
+    color: white;
+  }
+  
+
+  .modal-details-wrapper {
+    position: fixed; /* Keep in center so it does not move with scroll*/
+    top: 15%;
+    left: 25%;
+    transform: translate(0%, 0%);
+    z-index: 2; 
+    width: 50%;
+    border: 5px solid white;
+    border-radius: 25px;
+    font-family: cursive;
+  }
+  
+  .modal-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 25px 0 15rem;
+    background-color: rgb(27, 68, 202);
+    border-top: 5px solid white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 3rem;
+    color: white;
+  }
+  
+  .modal-header span {
+    width: 10%;
+    font-weight: bold;
+  }
+
+  .modal-header h2 {
+    width: 90%;
+    border: 2px solid Pink;
+  }
+  
+  .main-movie-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 15rem;
+    background-color: rgba(255, 255, 255, 0.60);
+  }
+
+  .movie-details {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+  }
+  
+  .stats h3, textarea {
+    margin-bottom:  2%;
+  }
+  
+  img {
+    width: 4rem;
+    /* border: 5px solid silver; */
+  }
+    
+  .modal-movie-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffc600;
+    border-top: 5px solid white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 2rem;
+    font-size: .75rem;
+    color: white;
+  }
+  
+  a:hover  {
+    cursor: pointer;
+    text-shadow: 15px 15px 15px rgb(0, 19, 128);
+    font-size: 1.25rem;
+  }
+  
+  span:hover {
+    cursor: pointer;
+    text-shadow: 15px 15px 15px rgb(0, 19, 128);
+    font-size: 1.25rem;
+  }
+  
+  /* Rotate the image */
+  img:hover {
+    /* adjust the seconds to speed-up or slow down rotation*/
+    animation: rotation 3s infinite linear;
+  
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
