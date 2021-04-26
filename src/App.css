@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  outline: 2px dotted rgb(231, 4, 4);
+  /* outline: 2px dotted rgb(231, 4, 4); */
 }
 
 
@@ -41,8 +41,9 @@ html {
 
 .main-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 4em;
+  padding: 10px 10px;
 }
 
 div > p, div > h2 {

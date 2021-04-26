@@ -8,12 +8,6 @@ import './App.css';
 
 function App() {
 
-  const hideModal = (elem) => {
-    elem.style.display = 'none'
-  }
-
-  
-
   // movies is the current state - setMovies is updated state
   const [movies, setMovies] = useState([]);
   // to start current state :selectedState will be null

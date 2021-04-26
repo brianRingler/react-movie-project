@@ -2,9 +2,8 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    outline: 2px dotted rgb(231, 4, 4);
+    /* outline: 2px dotted rgb(231, 4, 4); */
   }
-  
   
   html {
     box-sizing: border-box;
@@ -14,7 +13,6 @@
     font-weight: 200;
   }
 
-  
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -26,6 +24,7 @@
   
 
   .modal-details-wrapper {
+    display: none;
     position: fixed; /* Keep in center so it does not move with scroll*/
     top: 15%;
     left: 25%;
@@ -42,23 +41,41 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    padding: 0px 25px 0 15rem;
-    background-color: rgb(27, 68, 202);
+    /* padding: 0px 25px 0 15rem; */
+    background-color:#282c34;;
     border-top: 5px solid white;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     height: 3rem;
     color: white;
+    text-shadow: 2px 2px 2px #ffc600, 2px 2px 2px #ffc600,
+    18px 10px 8px rgba(42, 113, 206, 0.8);
   }
   
-  .modal-header span {
-    width: 10%;
+  .modal-header svg {
+    position: absolute;
+    top: 20px;
+    right: 25px;
     font-weight: bold;
   }
 
-  .modal-header h2 {
-    width: 90%;
-    border: 2px solid Pink;
+  svg {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+  }
+  svg > circle {
+      stroke: black;
+      fill: white;
+  }
+  svg > path {
+      stroke: black;
+  }
+  svg:hover > circle {
+      fill: #ffc600;
+  }
+  svg:hover > path {
+      stroke: white;
   }
   
   .main-movie-section {
@@ -67,30 +84,24 @@
     justify-content: space-around;
     align-items: center;
     height: 15rem;
-    background-color: rgba(255, 255, 255, 0.60);
+    color: white;
+    background-color:  rgba(42, 113, 206);
   }
 
   .movie-details {
     display: flex;
     flex-flow: column;
-    width: 50%;
+    height: 150px;
+    width: 250px;
   }
   
-  .stats h3, textarea {
-    margin-bottom:  2%;
-  }
-  
-  img {
-    width: 4rem;
-    /* border: 5px solid silver; */
-  }
     
   .modal-movie-footer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    background-color: #ffc600;
+    background-color:#282c34;
     border-top: 5px solid white;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -99,18 +110,16 @@
     color: white;
   }
   
-  a:hover  {
+  a:hover, p span:hover, span:hover  {
     cursor: pointer;
     text-shadow: 15px 15px 15px rgb(0, 19, 128);
     font-size: 1.25rem;
   }
   
-  span:hover {
-    cursor: pointer;
-    text-shadow: 15px 15px 15px rgb(0, 19, 128);
-    font-size: 1.25rem;
+  img {
+    width: 7rem;
+    border: 2px solid white;
   }
-  
   /* Rotate the image */
   img:hover {
     /* adjust the seconds to speed-up or slow down rotation*/

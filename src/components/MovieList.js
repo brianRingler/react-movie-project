@@ -12,6 +12,8 @@ function MovieList(props) {
 
     const movieClicked = (clickMovie) => (e) => {
         props.movieSelected(clickMovie)
+        const showDetails = document.querySelector(".modal-details-wrapper")
+        showDetails.style.display = 'block'
     };
 
     return (
