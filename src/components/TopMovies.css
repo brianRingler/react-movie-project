@@ -18,3 +18,60 @@
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+
+  .top-movies-250-wrapper {
+    outline: 2px dotted rgb(231, 4, 4);
+  }
+
+  .header-top-movies {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .field-names {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+
+  }
+
+  .top-movies-list img {
+    width: 67px;
+    height: 80px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 10px 5px;
+  
+  }
+
+  #rating {
+    position: absolute;
+    right: 53.5%;
+  }
+
+  #release {
+    position: absolute;
+    right: 65%;
+  }
+
+  .top-movies-250-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+
+  }
+
+  .top-movies-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }

@@ -41,7 +41,9 @@ class Rating(models.Model):
 '''Top 250 movies from IMDb Rank is 1 to 250. All fields are required are raise error. Need to find way to send email if missing data on error'''
 class TopMovie(models.Model):
     rank = models.PositiveIntegerField(default=0, validators=[MinValueValidator(1),MaxValueValidator(251)],blank=False)
-    image = models.ImageField(height_field=67, width_field=45, blank=False)
+    # got rid of height_field=67, width_field=45
+    # https://stackoverflow.com/questions/1683362/getattr-attribute-name-must-be-string-error-in-admin-panel-for-a-model-with
+    image = models.ImageField(blank=False) 
     title = models.CharField(max_length=125, blank=False)
     release_date = models.CharField(max_length=4, blank=False)
     rating = models.CharField(max_length=4, blank=False)
@@ -49,7 +51,7 @@ class TopMovie(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.id} {self.image} {self.tile} {self.rating} {self.release_date}"
+        return f"{self.id} {self.rank} {self.image} {self.title} {self.rating} {self.release_date}"
 
 
 

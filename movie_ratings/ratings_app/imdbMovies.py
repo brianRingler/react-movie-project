@@ -102,24 +102,16 @@ def populate_TopMovie():
 
         # If true all lists had a length of 250
         if result:          
-            for idx in range(1,251):
-                print(idx)
-                print(type(idx))
+            '''first delete all records in TopMovie db then populate with 
+            new top 250 movies. At any given time we only need most recent
+            top 250 movies'''
 
-                print(movie_data[0][idx])
-                print(type(movie_data[0][idx]))
-
-                print(movie_data[1][idx])
-                print(type(movie_data[1][idx]))
-
-                print(movie_data[2][idx])
-                print(type(movie_data[2][idx]))
-
-                print(movie_data[3][idx])
-                print(type(movie_data[3][idx]))
-
+            TopMovie.objects.all().delete()
+            
+            for idx in range(0,250):
+                # add one so rank min val = 1 and max = 250
                 TopMovie.objects.create(
-                                        rank=idx,
+                                        rank=idx + 1,
                                         image=movie_data[0][idx],
                                         title=movie_data[1][idx],
                                         release_date=movie_data[2][idx],
